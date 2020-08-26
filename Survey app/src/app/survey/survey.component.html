@@ -1,0 +1,111 @@
+
+ 
+ <!-- ------------------------------------------------------------------ -->
+
+
+<div class="container">
+    <h2 style="text-align: center; margin: 10px;">IMPLEMENTATION PLAN FRAMEWORK- SCHOOL EDUCATION</h2>
+    <div class="row firstrow">
+        <div class="col-lg-6">
+                <label for="username">Username</label>  
+                <input
+                  type="text"
+                  id="username"
+                  class="form-control"
+                  [(ngModel)]="survey['name']"
+                  placeholder="Please enter full name"
+                >
+        
+                <label for="email">E-Mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  [(ngModel)]="survey['email']"
+                  placeholder="Enter valid email"
+                  email
+                >
+                <label for="mobile">Mobile</label>
+                <input
+                  type="number"
+                  id="mobile"
+                  class="form-control"
+                  [(ngModel)]="survey['mobile']"
+                  name="email"
+                  placeholder="Enter valid Mobile number"
+                  email
+                >
+                
+                
+        </div>
+        <div class="col-lg-6">
+            <label for="org">Organisation</label>  
+            <input
+              type="text"
+              id="org"
+              class="form-control"
+              [(ngModel)]="survey['organisation']"
+              name="organisation"
+              placeholder="Enter organisation name"
+            >
+    
+            <label for="add">Address</label>
+            <input
+              type="text"
+              id="add"
+              class="form-control"
+              [(ngModel)]="survey['address']"
+              name="address"
+              placeholder="Enter full address"
+              email
+            >
+            <label for="resp">Responsibility</label>
+            <input
+              type="text"
+              id="resp"
+              class="form-control"
+              [(ngModel)]="survey['responsibility']"
+              name="email"
+              placeholder="Enter your responsibility"
+              email
+            >
+            
+            
+    </div>
+    
+    </div>
+            <hr>
+            <hr>
+    <div *ngFor="let sec of survey['survey'];let j = index">
+        <h4 class="section">Section {{j+1 }}. {{sec['topicName']}}</h4>
+        <hr>
+    <div *ngFor="let ref of sec['data']">
+        <h5 class="question">Ref. {{ref['ref']}} -- {{ref['desc']}}.</h5>
+        <hr>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let que of ref['questions']">
+                <div class="card">
+                <h6 class="cardhead">{{que['question']}}</h6>
+                
+                <div *ngFor="let opt of que['options'];let i = index">
+                    <!-- {{opt['qu']}} -->
+                    <input type="checkbox" name="survey" id=" opt['qu']" [(ngModel)]="opt[i]">
+                    <label class="labe"for="opt['qu']">{{opt['qu']}} </label><br>
+                </div>
+                <input *ngIf="que['allowTextAnswer']" placeholder="Other" class="other" type="text" [(ngModel)]="que['textAnswer']">
+                </div>
+                <hr>
+            </div>
+            
+        </div>
+    </div>
+    <hr>
+</div>
+<button (click)="check()" type="button" class="btn btn-success">
+    Submit
+ </button>
+</div>
+
+
+
+

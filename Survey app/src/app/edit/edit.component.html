@@ -1,0 +1,63 @@
+<h1>Edit Survey form </h1>
+<div class="row">   
+<label for="sk">Enter Secret Key to verify admin.</label>
+            <input
+              type="password"
+              id="sk"
+              class="form-control"
+                [(ngModel)] = "secretkey"
+              placeholder="Enter secret key"
+            >
+            <button (click)="verifyadmin()" type="button" class="btn btn-primary lastbtn">
+                Verify
+             </button>
+        </div> 
+<div class="row firstrow">
+    <div class="col-lg-6">
+            <label for="id">Topic ID</label>  
+            <input
+              type="text"
+              id="id"
+              class="form-control"
+              [(ngModel)] = "topicidd"
+              placeholder="Please enter topic id of this section"
+            >
+    
+            <label for="topic">Topic Name</label>
+            <input
+              type="text"
+              id="topic"
+              class="form-control"
+              [(ngModel)] = "topicnamee"
+              placeholder="Enter topic name"
+            >
+            <p *ngIf="quesadd">Question added</p>
+            <label for="ref">Ref No.</label>
+            <input
+              type="text"
+              id="ref"
+              class="form-control"
+              [(ngModel)] = "ref"
+              placeholder="Enter valid ref no."
+            >
+            <label for="desc">Description</label>
+            <input
+              type="text"
+              id="desc"
+              class="form-control"
+                [(ngModel)] = "desc"
+              placeholder="Enter description of question"
+            >
+            <div class="row">
+            <button (click)="addques()" [disabled]="verified" type="button" class="btn btn-success lastbtn">
+                Add question
+             </button>
+             <button (click)="addsection()" [disabled]="verified" type="button" class="btn btn-success lastbtn">
+                Add section
+             </button>
+            </div>
+            
+    </div>
+    
+
+</div>

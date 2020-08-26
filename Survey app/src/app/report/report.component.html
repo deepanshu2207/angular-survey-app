@@ -1,0 +1,57 @@
+<!-- <p>report works!</p> -->
+<!-- <ngx-spinner></ngx-spinner> -->
+
+<div class="container">
+    <hr>
+    <button type="button" class="btn btn-primary" style="margin-right: 5px;" routerLink="/stat">Next Page</button>
+    <!-- <button type="button" class="btn btn-primary" type="button" (click)= "download_data()">Download data</button>  -->
+    <hr>
+    <h4>Choose organization to get the statistics of filled responses:</h4>
+    <hr>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <select class="custom-select" 
+                        id="OrgData" 
+                        [(ngModel)]="selectedOrg" 
+                        *ngIf='all_org'>
+                      <option selected>Choose organisation..</option>  
+                     <option *ngFor='let org of all_org' 
+                             [ngValue]="org.org">{{org.org}}
+                     </option>
+                </select>
+                <div class="input-group-append">
+                <button class="btn btn-outline-secondary" 
+                        type="button" 
+                        (click)= "getdetailsofselectedorg_query1()"
+                        (click)= "getdetailsofselectedorg_query2()"
+                        (click)= "getdetailsofselectedorg_query3()"                      
+                        id="getData">Get Data
+                </button>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+       <h5 *ngIf="pieChart1 && pieChart1.dataTable != null">1. This section shows cumulative present status of schemes mentioned in survey:</h5>
+        <div class="col-lg-12" *ngIf="pieChart1 && pieChart1.dataTable != null">
+            <google-chart  [data]="pieChart1" ></google-chart>
+            <hr>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+        <h5 *ngIf="pieChart2 && pieChart2.dataTable != null">2.. This section shows cumulative implementation approach for the schemes:</h5>
+         <div class="col-lg-12" *ngIf="pieChart2 && pieChart2.dataTable != null">
+             <google-chart [data]="pieChart2" ></google-chart>
+             <hr>
+         </div>
+     </div>
+     <div class="row" style="margin-top: 20px;">
+        <h5 *ngIf="pieChart3 && pieChart3.dataTable != null">3.. This section shows cumulative implementation timeline for schemes:</h5>
+         <div class="col-lg-12" *ngIf="pieChart3 && pieChart3.dataTable != null">
+             <google-chart [data]="pieChart3" ></google-chart>
+             <hr>
+         </div>
+     </div> 
+    
+</div>    

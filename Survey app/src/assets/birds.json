@@ -1,0 +1,127 @@
+{  
+    "name":"",
+    "organisation":"",
+    "email":"",
+    "mobile":"",
+    "responsibility":"",
+    "address":"",
+    "survey": [
+        {
+            "topicId": "1001",
+            "topicName": "Early Childhood Care & Education (ECCE)",
+            "data": [
+                {
+                    "ref": "1.3",
+                    "desc": "A National Curricular and Pedagogical Framework for Early Childhood Care and Education (NCPFECCE) for children up to the age of 8 will be developed by NCERT in two parts, namely, a sub-framework for 0-3 year-olds, and a sub-framework for 3-8 year-olds",
+                    "questions": [
+                        {
+                            "question": "Present status in KA",
+                            "options": [
+                                {"0":false,"qu":"Satisfactory"},
+                                {"1":false,"qu":"Needs revamp"},
+                                {"2":false,"qu":"New program to be implemented"}
+                            ],
+                            "textAnswer": "Other",
+                            "allowTextAnswer": false
+                        },
+                        {
+                            "question": "Nature of Implications",
+                            "options": [
+                                {"0":false,"qu":"Administrative"},
+                                {"1":false,"qu":"Pedagogical"}
+                            ],
+                            "textAnswer": "",
+                            "allowTextAnswer": true
+                        },
+                        {
+                            "question": "Implementation Timeline",
+                            "options": [
+                                {"0":false,"qu":"Short Term"},
+                                {"1":false,"qu":"Long Term"}
+                            ],
+                            "textAnswer": "",
+                            "allowTextAnswer": true
+                        }
+                    ]
+                },
+                {
+                    "ref": "1.4",
+                    "desc": " Special attention and priority will be given to districts and locations that are particularly socio-economically disadvantaged. Would recruit workers/teachers specially trained in the curriculum and pedagogy of ECCE.",
+                    "questions": [
+                        {
+                            "question": "Present status in KA",
+                            "options": [
+                                {"0":false,"qu":"Satisfactory"},
+                                {"1":false,"qu":"Needs revamp"},
+                                {"2":false,"qu":"New program to be implemented"}
+                            ],
+                            "textAnswer": "Other",
+                            "allowTextAnswer": false
+                        },
+                        {
+                            "question": "Nature of Implications",
+                            "options": [
+                                {"0":false,"qu":"Administrative"},
+                                {"1":false,"qu":"Pedagogical"}
+                            ],
+                            "textAnswer": "",
+                            "allowTextAnswer": true
+                        },
+                        {
+                            "question": "Implementation Timeline",
+                            "options": [
+                                {"0":false,"qu":"Short Term"},
+                                {"1":false,"qu":"Long Term"}
+                            ],
+                            "textAnswer": "",
+                            "allowTextAnswer": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "topicId": "1002",
+            "topicName": "Foundational Literacy and Numeracy (FLN)",
+            "data": [
+                {
+                    "ref": "2.5",
+                    "desc": "An interim 3-month play-based ‘school preparation module’ for all Grade 1 students, consisting of activities and workbooks consisting components of foundational literacy and numeracy will be prepared",
+                    "questions": [
+                        {
+                            "question": "Present status in KA",
+                            "options": [
+                                {"0":false,"qu":"Satisfactory"},
+                                {"1":false,"qu":"Needs revamp"},
+                                {"2":false,"qu":"New program to be impl"}
+                            ],
+                            "answers" :[
+                                false,false,true
+                            ],
+                            "textAnswer": "User Text answer",
+                            "allowTextAnswer": false
+                        },
+                        {
+                            "question": "Nature of Implications",
+                            "options": [
+                                {"0":false,"qu":"Administrative"},
+                                {"1":false,"qu":"Pedagogical"}
+                            ],
+                            "textAnswer": "",
+                            "allowTextAnswer": true
+                        },
+                        {
+                            "question": "Implementation Timeline",
+                            "options": [
+                                {"0":false,"qu":"Short Term"},
+                                {"1":false,"qu":"Long Term"}
+                            ],
+                            "textAnswer": "",
+                            "allowTextAnswer": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

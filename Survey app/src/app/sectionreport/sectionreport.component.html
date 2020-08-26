@@ -1,0 +1,51 @@
+<ngx-spinner></ngx-spinner>
+<div class="container"> 
+<h4><u>Selected Section Report</u></h4>
+<hr>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <select class="custom-select" 
+                        id="OrgData" 
+                        [(ngModel)]="selectedsection" 
+                        *ngIf='allsections'>
+                      <option selected>Choose section..</option>  
+                     <option *ngFor='let section of allsections' 
+                             [ngValue]='section'>{{section}}
+                     </option>
+                </select>
+                <div class="input-group-append">
+                <button class="btn btn-outline-secondary" 
+                        type="button" 
+                        (click)= "selectedsection_data()"                      
+                        id="getData">Get Data
+                </button>
+                </div>  
+            </div>
+        </div>
+    </div>        
+<div class="row" style="margin-top: 10px;">
+    <h5 *ngIf="Bar1 && Bar1.dataTable != null">1. This section shows % of schemes having same status in KA for selected section:</h5>
+     
+    <div class="col-lg-12" *ngIf="Bar1 && Bar1.dataTable != null" style="margin-top: 10px;">
+         <google-chart [data]="Bar1" ></google-chart>
+         <hr>
+     </div>
+ </div>
+ <div class="row" style="margin-top: 10px;">
+    <h5 *ngIf="Bar2 && Bar2.dataTable != null">2. This section shows % of schemes having same nature of implementation for selected section:</h5>
+     
+    <div class="col-lg-12" *ngIf="Bar2 && Bar2.dataTable != null" style="margin-top: 10px;">
+         <google-chart [data]="Bar2" ></google-chart>
+         <hr>
+     </div>
+ </div>
+ <div class="row" style="margin-top: 10px;">
+    <h5 *ngIf="Bar3 && Bar3.dataTable != null">3. This section shows % of schemes having same implementation time for selected section:</h5>
+     
+    <div class="col-lg-12" *ngIf="Bar3 && Bar3.dataTable != null" style="margin-top: 10px;">
+         <google-chart [data]="Bar3" ></google-chart>
+         <hr>
+     </div>
+ </div> 
+</div>
